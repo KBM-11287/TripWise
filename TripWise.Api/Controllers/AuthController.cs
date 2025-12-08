@@ -18,8 +18,8 @@ namespace TripWise.Api.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
-            // for deom: validate user credentials (in real app, check against DB llokup + password hashing)
-            if (request.Username == "admin" && request.Password == "password123")
+            // for demo: validate user credentials (in real app, check against DB lokup + password hashing)
+            if (request.Username == "admin" && request.Password == "password@123")
             {
                 var token = GenerateJwtToken(request.Username);
                 return Ok(new { token });
